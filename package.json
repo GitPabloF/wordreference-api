@@ -2,8 +2,15 @@
   "name": "wordreference-proxy",
   "version": "1.0.0",
   "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
     "express": "^4.18.2",
+    "nodemon": "^3.1.10",
     "wordreference-api": "^1.0.3"
   }
 }
