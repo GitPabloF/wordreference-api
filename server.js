@@ -1,8 +1,12 @@
-// wordreference-proxy/server.js
 const express = require("express")
+const cors = require("cors")
 const wr = require("wordreference-api")
+require("dotenv").config()
+
 const app = express()
-const PORT = 4000
+app.use(cors())
+app.use(express.json())
+const PORT = process.env.PORT || 4000
 
 app.get("/translate", async (req, res) => {
   const { word, from = "en", to = "fr" } = req.query
@@ -21,5 +25,5 @@ app.get("/translate", async (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`WordReference proxy server running on http://localhost:${PORT}`)
+  console.log(`WordReference proxy server running on PORT: ${PORT}`)
 })
