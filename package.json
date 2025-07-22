@@ -1,0 +1,9 @@
+{
+  "name": "wordreference-proxy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "wordreference-api": "^1.0.3"
+  }
+}
